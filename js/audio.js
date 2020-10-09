@@ -4,7 +4,7 @@ let loaded = false;
 let played = false;
 
 const audioLoaded = () => {
-  auido.volume = 0.0;
+  auido.volume = 0.6;
 
   auido.addEventListener("canplaythrough", () => {
     loaded = true;
