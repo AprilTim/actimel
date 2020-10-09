@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 	var body = document.querySelector('body');
 	var bg = document.querySelector('.bg');
-	var header = document.querySelector('.header');
+	/*var header = document.querySelector('.header');*/
 	var colors = [
 		[255, 211, 211],
 		[255, 243, 211],
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	var bgColorScene = new ScrollMagic.Scene({
 			triggerElement: '.scroll-container',
-			duration: document.querySelector('.scroll-container').offsetHeight,
+			duration: document.querySelector('.scroll-container').offsetHeight || 0,
 		})
 		.on("progress", function(e) {
 			var progress = e.progress.toFixed(2) * 100;
@@ -34,9 +34,21 @@ document.addEventListener('DOMContentLoaded', function() {
 					var g = colors[i][1] + difG;
 					var b = colors[i][2] + difB;
 					bg.style.background = 'radial-gradient(44.79% 71.67% at 50% 50%, rgb(255,255,255) 0%, rgb(' + r + ',' + g + ',' + b + ') 100%)';
-					header.style.background = 'linear-gradient(180deg, rgb(' + r + ',' + g + ',' + b + ') 49.91%, rgba(255, 255, 255, 0))'
+					/*header.style.background = 'linear-gradient(180deg, rgb(' + r + ',' + g + ',' + b + ') 49.91%, rgba(255, 255, 255, 0))'*/
 				}
 			}
 		})
 		.addTo(ctrl);
+
+	var canvasScene = new ScrollMagic.Scene({
+		triggerElement: '.main',
+		duration: document.querySelector('.main').offsetHeight,
+	})
+		.on('progress', function(e){
+			window.scrollTo({
+				top: document.querySelector('.main').offsetTop,
+			})
+			document.querySelector('body').style.overflow = 'hidden';
+		}).addTo(ctrl);
 });
+
