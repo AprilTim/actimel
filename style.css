@@ -19,7 +19,7 @@
 }
 
 .container {
-    height: 1000px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +36,7 @@
 }
 
 .main-title {
-    padding-top: 120px;
+    padding-top: 5%;
     text-align: center;
     font-family: Graphik RBC LC;
     font-weight: 600;
@@ -49,6 +49,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: calc(90% - 300px);
+    max-height: 239px;
 }
 
 .header {
@@ -101,4 +103,13 @@
     height: 100vh;
     color: #fff;
     background: radial-gradient(62.08% 117.44% at 50% 77.04%, #FFFFFF 19.79%, #DB62AC 63.02%, #2C479B 100%);;
+}
+
+.logo-bottle {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: calc(90% - 195px);
+    max-height: 478px;
 }
