@@ -24,7 +24,8 @@ li {
 
 .container {
     margin: 0 auto;
-    max-width: 1440px;
+    padding: 0 20px;
+    max-width: 1400px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -96,6 +97,10 @@ li {
     font-weight: 400;
     font-size: 24px;
     line-height: 33px;
+}
+
+.task-block-item:not(:first-child) {
+    margin-left: 40px;
 }
 
 .subtitle {
