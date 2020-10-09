@@ -4,15 +4,22 @@
     box-sizing: border-box;
 }
 
+html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 li {
     margin: 5px 0;
 }
 
-
-
 @font-face {
     font-family: Graphik RBC LC;
     src: local(''),
+    url('./fonts/GraphikLC-Semibold.ttf') format('ttf'),
+    url('./fonts/GraphikLC-Semibold.woff') format('woff'),
     url('./fonts/GraphikLC-Semibold.woff2') format('woff2');
     font-weight: 600;
 }
@@ -20,6 +27,8 @@ li {
 @font-face {
     font-family: Graphik RBC LC;
     src: local(''),
+    url('./fonts/GraphikLC-Regular.ttf') format('ttf'),
+    url('./fonts/GraphikLC-Regular.woff') format('woff'),
     url('./fonts/GraphikLC-Regular.woff2') format('woff2');
     font-weight: 400;
 }
@@ -27,6 +36,8 @@ li {
 @font-face {
     font-family: Graphik RBC LC;
     src: local(''),
+    url('./fonts/GraphikLC-RegularItalic.ttf') format('ttf'),
+    url('./fonts/GraphikLC-RegularItalic.woff') format('woff'),
     url('./fonts/GraphikLC-RegularItalic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
@@ -35,6 +46,8 @@ li {
 @font-face {
     font-family: Roboto;
     src: local(''),
+    url('./fonts/Roboto-Bold.ttf') format('ttf'),
+    url('./fonts/Roboto-Bold.woff') format('woff'),
     url('./fonts/Roboto-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: italic;
@@ -143,6 +156,21 @@ li {
     margin-left: 50px;
 }
 
+.communication {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.communication-item {
+    flex: 0 0 150px;
+}
+
+.communication-item-title {
+    margin-bottom: 25px;
+}
+
 .subtitle {
     margin-bottom: 67px;
     max-width: 1128px;
@@ -186,16 +214,22 @@ ul li {
     content: "— ";
 }
 
+.warning {
+    width: 70%;
+}
+
 .logo_actimel {
     position: absolute;
     top: 60px;
     left: 80px;
+    z-index: 35;
 }
 
 .sound {
     position: absolute;
     top: 60px;
     right: 60px;
+    z-index: 35;
 }
 
 /*.sound-off {
@@ -216,17 +250,19 @@ ul li {
     font-size: 20px;
     line-height: 28px;
     color: #002495;
+    z-index: 35;
+}
+
+.phone span {
+    font-weight: 700;
+    color: #ff010b;
 }
 
 .logo_danone {
     position: absolute;
     bottom: 40px;
     right: 60px;
-}
-
-.phone span {
-    font-weight: 700;
-    color: #ff010b;
+    z-index: 35;
 }
 
 .info {
@@ -238,6 +274,10 @@ ul li {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: left;
+}
+
+.info.touched {
+    display: none;
 }
 
 .info-left {
