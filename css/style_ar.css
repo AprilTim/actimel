@@ -1,0 +1,7 @@
+* {
+  direction: rtl;
+  font-family: "NotoSansArabic", "Arial", "sans-serif" !important; }
+
+.pp-section-toggle .block:last-child img {
+  margin-right: 32px;
+  margin-left: 0; }

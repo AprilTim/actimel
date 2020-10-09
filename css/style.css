@@ -1,0 +1,132 @@
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/*body {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fff;
+  font-size: 14px; }
+  body.fixed {
+    overflow: hidden;
+    height: 100%; }
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  -webkit-appearance: none; }
+  * img {
+    width: 100%;
+    height: auto; }
+  * img, * svg {
+    display: block; }
+  * textarea {
+    resize: none; }
+  * a {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block; }
+    * a img {
+      border: none; }
+  * ul {
+    margin: 0;
+    padding: 0; }
+    * ul li {
+      list-style: none; }*/
+
+.main {
+  position: relative;
+  background-color: deepskyblue;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; }
+
+.overlay {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  opacity: 0;
+  -webkit-transition: 0.5s opacity;
+  transition: 0.5s opacity; }
+
+.section.hide .overlay {
+  opacity: 1; }
+
+.ocean {
+  z-index: 1;
+  background: radial-gradient(52.13% 172.63% at 49.27% 87.64%, #FFFFFF 25%, #DB62AC 63.02%, #2C479B 100%) center no-repeat;
+  background-size: cover; }
+  .ocean.color-1 {
+    background: radial-gradient(52.13% 172.63% at 49.27% 87.64%, #FFFFFF 25%, #DB62AC 63.02%, #2C479B 100%) center no-repeat; }
+  .ocean.color-2 {
+    background: radial-gradient(52.13% 172.63% at 49.27% 87.64%, #FFFFFF 19.79%, #BDE2FF 59.38%, #F89CDA 100%); }
+  .ocean.color-3 {
+    background: radial-gradient(52.13% 172.63% at 49.27% 87.64%, #FFFFFF 19.79%, #F7B74B 42.71%, #994E57 73.44%, #345E20 100%); }
+  .ocean.color-4 {
+    background: radial-gradient(52.13% 172.63% at 49.27% 87.64%, #FFFFFF 19.79%, #FDF3C2 63.02%, #C0835F 100%); }
+  .ocean.color-5 {
+    background: radial-gradient(52.13% 172.63% at 49.27% 87.64%, #FFFFFF 19.79%, #EAC743 63.02%, #CE2419 100%); }
+  .ocean .controls {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .ocean .controls li {
+      width: 40px;
+      height: 40px;
+      margin: 0 8px;
+      border-radius: 50%;
+      cursor: pointer;
+      -webkit-transition: 0.25s;
+      transition: 0.25s; }
+      .ocean .controls li.active {
+        cursor: default; }
+      .ocean .controls li.color-1 {
+        background: radial-gradient(52.13% 172.63% at 49.27% 87.64%, #FFFFFF 25%, #DB62AC 63.02%, #2C479B 100%) center no-repeat; }
+      .ocean .controls li.color-2 {
+        background: radial-gradient(52.13% 172.63% at 49.27% 87.64%, #FFFFFF 19.79%, #BDE2FF 59.38%, #F89CDA 100%); }
+      .ocean .controls li.color-3 {
+        background: radial-gradient(52.13% 172.63% at 49.27% 87.64%, #FFFFFF 19.79%, #F7B74B 42.71%, #994E57 73.44%, #345E20 100%); }
+      .ocean .controls li.color-4 {
+        background: radial-gradient(52.13% 172.63% at 49.27% 87.64%, #FFFFFF 19.79%, #FDF3C2 63.02%, #C0835F 100%); }
+      .ocean .controls li.color-5 {
+        background: radial-gradient(52.13% 172.63% at 49.27% 87.64%, #FFFFFF 19.79%, #EAC743 63.02%, #CE2419 100%); }
+
+.sandbox {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background: radial-gradient(52.13% 171.63% at 48.27% 87.64%, #FFFFFF 0%, #DB62AC 63.02%, #2C479B 100%) center no-repeat;
+  background-size: cover; }
+
+.sphere {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background: radial-gradient(52.13% 172.63% at 49.27% 87.64%, #FFFFFF 25%, #DB62AC 63.02%, #2C479B 100%) center no-repeat;
+  background-size: cover; }
+
+.bottle {
+  position: absolute;
+  top: 0;
+  left: 0; }
