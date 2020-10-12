@@ -117,7 +117,7 @@ li {
 }
 
 .title {
-    margin-bottom: 57px;
+    margin-bottom: 0.81em;
     font-family: Graphik RBC LC;
     font-style: normal;
     font-weight: 600;
@@ -166,7 +166,7 @@ li {
 }
 
 .subtitle {
-    margin-bottom: 67px;
+    margin-bottom: 2.79em;
     max-width: 1128px;
     font-family: Graphik RBC LC;
     font-style: normal;

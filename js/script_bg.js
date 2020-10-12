@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		document.querySelector('body').style.overflow = 'unset';
 		document.querySelector('.canvas-overlay').style.display = 'block';
 		window.scrollTo(0, 0);
-	}, 100);
+	}, 200);
 	var body = document.querySelector('body');
 	var bg = document.querySelector('.bg');
 	/*var header = document.querySelector('.header');*/
