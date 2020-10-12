@@ -50,7 +50,6 @@ li {
     url('./fonts/Roboto-Bold.woff') format('woff'),
     url('./fonts/Roboto-Bold.woff2') format('woff2');
     font-weight: 700;
-    font-style: italic;
 }
 
 .container {
@@ -117,12 +116,6 @@ li {
     text-align: center;
 }
 
-.quotes {
-    text-align: left;
-    font-family: Graphik RBC LC;
-    font-style: italic;
-}
-
 .title {
     margin-bottom: 57px;
     font-family: Graphik RBC LC;
@@ -134,7 +127,8 @@ li {
 }
 
 .task-block {
-    width: 100%;
+    margin: 0 auto;
+    width: 85%;
     display: flex;
     justify-content: space-between;
 }
@@ -144,7 +138,7 @@ li {
 }
 
 .task-block-item {
-    max-width: 393px;
+    width: 100%;
     font-family: Graphik RBC LC;
     font-style: normal;
     font-weight: 400;
@@ -214,7 +208,7 @@ ul li {
     content: "— ";
 }
 
-.warning {
+.video {
     width: 70%;
 }
 
@@ -246,7 +240,7 @@ ul li {
     left: 75px;
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 20px;
     line-height: 28px;
     color: #002495;
@@ -283,7 +277,7 @@ ul li {
 .info-left {
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 20px;
     line-height: 28px;
     color: #FFFFFF;
@@ -292,7 +286,7 @@ ul li {
 .info-right {
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 20px;
     line-height: 28px;
     color: #2D489C;
@@ -312,6 +306,14 @@ ul li {
     color: #DC67AF;
 }
 
+.canvas-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .footer {
     position: absolute;
     top: 0;
@@ -326,4 +328,22 @@ ul li {
 
 .left {
     text-align: left;
+}
+
+@media (max-height: 800px ) {
+    .title {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .task-block {
+        width: 70%;
+    }
+
+    .task-block-item {
+        font-size: 18px;
+    }
 }

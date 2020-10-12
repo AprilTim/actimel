@@ -1,5 +1,6 @@
 const auido = document.querySelector(".js-audio");
 const audioControl = document.querySelector(".js-audio-control");
+const main = document.querySelector(".main");
 let loaded = false;
 let played = false;
 
@@ -22,7 +23,7 @@ const audioLoaded = () => {
   });
   auido.load()
 }
-window.addEventListener("click", () => {
+main.addEventListener("click", () => {
 	if (loaded && !played) {
 		audioControl.classList.add("paused");
 		auido.play();

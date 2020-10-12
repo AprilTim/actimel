@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+	setTimeout(function(){
+		document.querySelector('body').style.overflow = 'unset';
+		document.querySelector('.canvas-overlay').style.display = 'block';
+		window.scrollTo(0, 0);
+	}, 100);
 	var body = document.querySelector('body');
 	var bg = document.querySelector('.bg');
 	/*var header = document.querySelector('.header');*/
@@ -44,11 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		triggerElement: '.main',
 		duration: document.querySelector('.main').offsetHeight,
 	})
-		.on('progress', function(e){
-			window.scrollTo({
-				top: document.querySelector('.main').offsetTop,
-			})
-			document.querySelector('body').style.overflow = 'hidden';
-		}).addTo(ctrl);
+	.on('enter', function(e){
+		window.scrollTo({
+			top: document.querySelector('.main').offsetTop,
+		})
+		document.querySelector('body').style.overflow = 'hidden';
+		document.querySelector('.canvas-overlay').style.display = 'none';
+	}).addTo(ctrl);
 });
 
